@@ -15,7 +15,6 @@ import java.nio.ByteOrder;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.example.jacksoket.ClientThread.soket_call_back;
 
 
 public class Soket_Call_back extends TcpClient {
@@ -68,7 +67,7 @@ public class Soket_Call_back extends TcpClient {
                     try {
                         JSONObject jsout2 = new JSONObject();
                         jsout2.put("type", "base.pong");
-                        soket_call_back.getTransceiver().send(jsout2.toString());
+                        this.getTransceiver().send(jsout2.toString());
 
                     } catch (Exception e) {
 
@@ -85,7 +84,7 @@ public class Soket_Call_back extends TcpClient {
                     jsout.put("device", "order");
 //                jsout.put("device","device");
                     jsout.put("token", data);
-                    soket_call_back.getTransceiver().send(jsout.toString());
+                    this.getTransceiver().send(jsout.toString());
                     Log.d("Log", "Soket client_id==" + jsout.toString());
 
 

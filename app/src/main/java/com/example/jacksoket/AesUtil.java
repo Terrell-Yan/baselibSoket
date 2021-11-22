@@ -12,7 +12,7 @@ import javax.crypto.SecretKey;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 
-public class AesUtil { private final static String HEX = "0123456789ABCDEF";
+public class  AesUtil { private final static String HEX = "0123456789ABCDEF";
     //AES是加密方式 CBC是工作模式 PKCS5Padding是填充模式
     private static final String CBC_PKCS5_PADDING = "AES/CBC/PKCS5Padding";
     //AES 加密
